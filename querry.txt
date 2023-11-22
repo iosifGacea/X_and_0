@@ -1,0 +1,23 @@
+CREATE TABLE PLAYERS
+(
+id INT NOT NULL IDENTITY PRIMARY KEY,
+NUME VARCHAR(255),
+PAROLA VARCHAR(255),
+JOCURI_JUCATE INT,
+JOCURI_CASTIGATE INT
+);
+
+Create Procedure InsertInPlayers
+(
+@nume varchar(255),
+@parola varchar(255)
+)
+as
+insert into PLAYERS( NUME, PAROLA, JOCURI_JUCATE, JOCURI_CASTIGATE)
+values (@nume,  @parola, 0, 0)
+
+
+Create procedure SelectAllPlayers
+  as
+  select * from PLAYERS
+  go

@@ -1,0 +1,38 @@
+﻿<Window x:Class="X_0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:X_0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="630" Width="830">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="140"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="FIRST PLAYER" FontFamily="Arial Black" FontSize="24"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="SECOND PLAYER" HorizontalAlignment="Right" FontFamily="Arial Black" FontSize="24"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="name:" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="name:" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="2" Grid.Column="0" x:Name="name1" Width="300" HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="name2" Width="300" HorizontalAlignment="Right"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="password:" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="password:" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="4" Grid.Column="0" x:Name="password1" Width="300" HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="password2" Width="300" HorizontalAlignment="Right"/>
+        <Button Content="START GAME" Grid.Row="5" Grid.ColumnSpan="2" Click="startGameClick" Height="50" Width="130"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="If you do not have an account, then" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Button Grid.Row="6" Grid.Column="1" Content="CREATE A NEW ACCOUNT" Height="20" Width="180" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="createANewAccountClick"/>
+    </Grid>
+</Window>
